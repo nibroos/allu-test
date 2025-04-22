@@ -1,75 +1,48 @@
-# Nuxt 3 Minimal Starter
+# Frontend Test Assignment
+Name: **Nibros Ari Wibowo**
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Tech Stack
 
-## Setup
+- Nuxt 3.11
+- Vue 3
+- Vuetify 3
+- Pinia (State Management)
+- Tailwind CSS
 
-Make sure to install the dependencies:
+## Functional Requirements
 
-```bash
-# npm
-npm install
+- As a user, I want to see a list of rockets in the rocket list screen (Show each rocket image, rocket name, and rocket description)
 
-# pnpm
-pnpm install
+Answer:
+By using vuetify, loading, error, and success states are handled by v-data-table
 
-# yarn
-yarn install
+![img](https://github.com/user-attachments/assets/8ca56c42-72ac-4048-9b5c-29a69b11b029)
+- As a user, I want to be able to filter the rockets in the rocket list screen
 
-# bun
-bun install
-```
+Answer:
+The endpoint filter doesnt work, but you can filter the rockets by name & desc in the global search bar. If you want to fail the test, you can set fail state to true on of filters.
 
-## Development Server
+- As a user, I want to be able to add the new rocket in the rocket list screen
 
-Start the development server on `http://localhost:3000`:
+Answer:
+If its refreshed, the new custom rocket still exists thanks to pinia persisted.
+![Image](https://github.com/user-attachments/assets/f49a115a-3e7b-4f2d-acce-c6a50db5b511)
 
-```bash
-# npm
-npm run dev
+- As a user, I want to be able to see the rocket detail by clicking a rocket in the rocket list screen (Show rocket image, rocket name, rocket description, cost per launch, country, first flight)
 
-# pnpm
-pnpm run dev
+Answer:
+Double click the row to see the rocket detail
 
-# yarn
-yarn dev
+![Image](https://github.com/user-attachments/assets/8ed2f00c-eff3-4b59-bcb2-01f14e0bcad7)
 
-# bun
-bun run dev
-```
+## Non-Functional Requirements
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Use Space-X API (https://github.com/r-spacex/SpaceX-API) for getting the rocket data
+- Implement routers
+- Implement state management
+- Implement lifecycles
+- Create components based will be + points
+- UI states (Loading, Fail/Retry, and Success)
+- Show loading when waiting response from API
+- If an error occurred, user can retry by pressing retry button
+- Show result when get response from API

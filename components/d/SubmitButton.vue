@@ -5,12 +5,16 @@ type IProps = {
   class?: string;
   submitClass?: string;
   clearClass?: string;
+  submitText?: string;
+  iconSubmit?: string;
 };
 
 const props = withDefaults(defineProps<IProps>(), {
   class: "",
+  submitText: "Find",
   submitClass: "",
   clearClass: "",
+  iconSubmit: "mdi-magnify",
 });
 
 const emits = defineEmits(["click:submit", "click:clear"]);
@@ -40,7 +44,7 @@ const handleClickClear = () => {
     </v-btn> -->
     <div class="grid grid-cols-5 gap-2 items-stretch col-span-3 sm:col-span-6">
       <d-button
-        :cta="'Find'"
+        :cta="props.submitText"
         :class="
           classMerge(
             '!bg-sc hover:!bg-scDarker col-span-3 text-white grow text-sm transition-all ease-in-out border-1.5 p-2 rounded-lg ',
@@ -51,7 +55,7 @@ const handleClickClear = () => {
         type="submit"
         size="xl"
         @click="handleClickSubmit()"
-        icon="mdi-magnify"
+        :icon="props.iconSubmit"
       />
       <d-button
         :cta="'Clear'"

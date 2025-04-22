@@ -19,12 +19,12 @@ export const useMyFetch = function () {
   baseApi.interceptors.request.use(config => {
     // const token = localStorage.getItem("_token");
 
-    let authStore = JSON.parse(localStorage.getItem('AuthStore') || '{}') as { authUser: AuthUserType }
-    const token = authStore?.authUser?.optional?.token || null;
+    // let authStore = JSON.parse(localStorage.getItem('AuthStore') || '{}') as { authUser: AuthUserType }
+    // const token = authStore?.authUser?.optional?.token || null;
 
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
+    // if (token) {
+    //   config.headers.Authorization = `Bearer ${token}`;
+    // }
     return config;
   })
 
