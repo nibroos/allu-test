@@ -1,0 +1,33 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit",
+		"source.fixAll": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	},
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+	"vue.complete.casing.props": "kebab",
+	"vue.complete.casing.tags": "kebab",
+	"vetur.validation.template": false
+	// "workbench.colorCustomizations": {
+	//   "activityBar.background": "#0E1A8B",
+	//   "titleBar.activeBackground": "#1424C3",
+	//   "titleBar.activeForeground": "#FAFBFF"
+	// }
+}

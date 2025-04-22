@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: 'Roboto';
+  background-color: !brown;
+}
+
+.v-breadcrumbs-divider {
+  padding: 0 !important;
+}
+
+.v-breadcrumbs-item {
+  padding: 0 !important;
+}
+
+.sticky-right {
+  position: sticky !important;
+  right: 0 !important;
+  z-index: 1;
+}
+
+
+.action-table {
+  height: 100%;
+  white-space: nowrap;
+  text-align: right;
+  position: relative;
+}
+
+.action-table .action-button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0, -50%);
+  height: 100%;
+  transition: all 0.05s ease;
+  opacity: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  z-index: 5;
+}
+
+.action-table .action-button a {
+  /* margin-right: 0.25em; */
+}
+
+.table-hover tbody tr:hover td.action-table .action-button {
+  opacity: 1;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(151, 118, 105, 0.5));
+}
+
+[data-theme="dark"].table-hover tbody tr:hover td.action-table .action-button {
+  opacity: 1;
+  background: linear-gradient(to right, rgba(63, 63, 70, 0), rgba(255, 187, 124, 0.8)) !important;
+}
+
+.custom-swal {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swal2-container {
+  z-index: 3000 !important;
+}
