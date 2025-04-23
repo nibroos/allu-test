@@ -18,7 +18,10 @@ const formInputs = [
   },
 ];
 
+const router = useRouter();
+
 onMounted(async () => {
+  form.value.id = (router.currentRoute.value.params.id as string) || "";
   Promise.all([rocketStore.show()]);
 });
 </script>
@@ -58,20 +61,21 @@ onMounted(async () => {
             </p>
             <p class="text-lg text-justify">
               <span class="font-bold">Rocket Height:</span>
-              {{ form.height.meters }} m
+              {{ form.height?.meters ?? 0 }} m
             </p>
             <p class="text-lg text-justify">
               <span class="font-bold">Rocket Diameter:</span>
-              {{ form.diameter.meters }} m
+              {{ form.diameter?.meters ?? 0 }} m
             </p>
             <p class="text-lg text-justify">
-              <span class="font-bold">Rocket Mass:</span> {{ form.mass.kg }} kg
+              <span class="font-bold">Rocket Mass:</span>
+              {{ form.mass?.kg ?? 0 }} kg
             </p>
             <!-- cost per launch, country, first flight -->
 
             <p class="text-lg text-justify">
               <span class="font-bold">Cost per Launch:</span>
-              {{ form.cost_per_launch }}
+              {{ form.cost_per_launch ?? 0 }}
             </p>
             <p class="text-lg text-justify">
               <span class="font-bold">Country:</span>

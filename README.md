@@ -9,6 +9,24 @@ Name: **Nibros Ari Wibowo**
 - Pinia (State Management)
 - Tailwind CSS
 
+## Quick Start
+
+Install dependencies
+
+```bash
+npm install 
+or
+bun install
+```
+
+Run the development server
+
+```bash
+npm run dev
+or
+bun dev
+```
+
 ## Functional Requirements
 
 - As a user, I want to see a list of rockets in the rocket list screen (Show each rocket image, rocket name, and rocket description)
